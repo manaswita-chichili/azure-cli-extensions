@@ -63,6 +63,9 @@ aks create:
     enable_azure_container_storage:
       rule_exclusions:
         - option_length_too_long
+    container_storage_version:
+      rule_exclusions:
+        - option_length_too_long
     ephemeral_disk_volume_type:
       rule_exclusions:
         - option_length_too_long
@@ -97,6 +100,9 @@ aks create:
       rule_exclusions:  
         - option_length_too_long
     acns_advanced_networkpolicies:
+      rule_exclusions:
+        - option_length_too_long
+    acns_datapath_acceleration_mode:
       rule_exclusions:
         - option_length_too_long
     acns_transit_encryption_type:
@@ -200,6 +206,9 @@ aks update:
     disable_azure_container_storage:
       rule_exclusions:
         - option_length_too_long
+    container_storage_version:
+      rule_exclusions:
+        - option_length_too_long
     azure_container_storage_nodepools:
       rule_exclusions:
         - option_length_too_long
@@ -243,6 +252,9 @@ aks update:
       rule_exclusions:  
         - option_length_too_long
     acns_advanced_networkpolicies:
+      rule_exclusions:
+        - option_length_too_long
+    acns_datapath_acceleration_mode:
       rule_exclusions:
         - option_length_too_long
     acns_transit_encryption_type:

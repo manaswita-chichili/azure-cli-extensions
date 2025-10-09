@@ -93,13 +93,17 @@ from azext_aks_preview._consts import (
     CONST_OS_DISK_TYPE_MANAGED,
     CONST_OS_SKU_AZURELINUX,
     CONST_OS_SKU_AZURELINUX3,
+    CONST_OS_SKU_FLATCAR,
     CONST_OS_SKU_CBLMARINER,
     CONST_OS_SKU_MARINER,
+    CONST_OS_SKU_AZURELINUXOSGUARD,
+    CONST_OS_SKU_AZURELINUX3OSGUARD,
     CONST_OS_SKU_UBUNTU,
     CONST_OS_SKU_UBUNTU2204,
     CONST_OS_SKU_UBUNTU2404,
     CONST_OS_SKU_WINDOWS2019,
     CONST_OS_SKU_WINDOWS2022,
+    CONST_OS_SKU_WINDOWS2025,
     CONST_OS_SKU_WINDOWSANNUAL,
     CONST_PATCH_UPGRADE_CHANNEL,
     CONST_RAPID_UPGRADE_CHANNEL,
@@ -152,6 +156,10 @@ from azext_aks_preview._consts import (
     CONST_ADVANCED_NETWORKPOLICIES_L7,
     CONST_TRANSIT_ENCRYPTION_TYPE_NONE,
     CONST_TRANSIT_ENCRYPTION_TYPE_WIREGUARD,
+    CONST_ACNS_DATAPATH_ACCELERATION_MODE_BPFVETH,
+    CONST_ACNS_DATAPATH_ACCELERATION_MODE_NONE,
+    CONST_UPGRADE_STRATEGY_ROLLING,
+    CONST_UPGRADE_STRATEGY_BLUE_GREEN
 )
 
 from azext_aks_preview._validators import (
@@ -223,6 +231,7 @@ from azext_aks_preview._validators import (
     validate_gateway_prefix_size,
     validate_max_unavailable,
     validate_max_blocked_nodes,
+    validate_drain_batch_size,
     validate_resource_group_parameter,
     validate_location_resource_group_cluster_parameters,
 )
@@ -272,23 +281,30 @@ node_mode_types = [
 node_os_skus_create = [
     CONST_OS_SKU_AZURELINUX,
     CONST_OS_SKU_AZURELINUX3,
+    CONST_OS_SKU_FLATCAR,
     CONST_OS_SKU_UBUNTU,
     CONST_OS_SKU_CBLMARINER,
     CONST_OS_SKU_MARINER,
     CONST_OS_SKU_UBUNTU2204,
     CONST_OS_SKU_UBUNTU2404,
+    CONST_OS_SKU_AZURELINUXOSGUARD,
+    CONST_OS_SKU_AZURELINUX3OSGUARD,
 ]
-node_os_skus = node_os_skus_create + [
+node_os_skus_add = node_os_skus_create + [
     CONST_OS_SKU_WINDOWS2019,
     CONST_OS_SKU_WINDOWS2022,
+    CONST_OS_SKU_WINDOWS2025,
     CONST_OS_SKU_WINDOWSANNUAL,
 ]
 node_os_skus_update = [
     CONST_OS_SKU_AZURELINUX,
     CONST_OS_SKU_AZURELINUX3,
+    CONST_OS_SKU_FLATCAR,
     CONST_OS_SKU_UBUNTU,
     CONST_OS_SKU_UBUNTU2204,
     CONST_OS_SKU_UBUNTU2404,
+    CONST_OS_SKU_AZURELINUXOSGUARD,
+    CONST_OS_SKU_AZURELINUX3OSGUARD,
 ]
 scale_down_modes = [CONST_SCALE_DOWN_MODE_DELETE, CONST_SCALE_DOWN_MODE_DEALLOCATE]
 workload_runtimes = [
@@ -338,6 +354,10 @@ advanced_networkpolicies = [
 transit_encryption_types = [
     CONST_TRANSIT_ENCRYPTION_TYPE_NONE,
     CONST_TRANSIT_ENCRYPTION_TYPE_WIREGUARD,
+]
+acns_datapath_acceleration_modes = [
+    CONST_ACNS_DATAPATH_ACCELERATION_MODE_NONE,
+    CONST_ACNS_DATAPATH_ACCELERATION_MODE_BPFVETH,
 ]
 network_dataplanes = [CONST_NETWORK_DATAPLANE_AZURE, CONST_NETWORK_DATAPLANE_CILIUM]
 disk_driver_versions = [CONST_DISK_DRIVER_V1, CONST_DISK_DRIVER_V2]
@@ -424,6 +444,12 @@ ingress_gateway_types = [
 ]
 
 # azure container storage
+# azure container storage
+container_storage_versions = [
+    "1",
+    "2"
+]
+
 storage_pool_types = [
     CONST_STORAGE_POOL_TYPE_AZURE_DISK,
     CONST_STORAGE_POOL_TYPE_EPHEMERAL_DISK,
@@ -505,6 +531,11 @@ app_routing_nginx_configs = [
 gpu_driver_types = [
     CONST_GPU_DRIVER_TYPE_CUDA,
     CONST_GPU_DRIVER_TYPE_GRID,
+]
+
+upgrade_strategies = [
+    CONST_UPGRADE_STRATEGY_ROLLING,
+    CONST_UPGRADE_STRATEGY_BLUE_GREEN,
 ]
 
 
@@ -915,6 +946,12 @@ def load_arguments(self, _):
             arg_type=get_enum_type(advanced_networkpolicies),
         )
         c.argument(
+            "acns_datapath_acceleration_mode",
+            is_preview=True,
+            arg_type=get_enum_type(acns_datapath_acceleration_modes),
+            help="Specify the performance acceleration mode for ACNS. Available values are 'None' and 'BpfVeth'.",
+        )
+        c.argument(
             "acns_transit_encryption_type",
             is_preview=True,
             arg_type=get_enum_type(transit_encryption_types),
@@ -1000,8 +1037,14 @@ def load_arguments(self, _):
         # azure container storage
         c.argument(
             "enable_azure_container_storage",
-            arg_type=get_enum_type(storage_pool_types),
-            help="enable azure container storage and define storage pool type",
+            arg_type=_get_enable_azure_container_storage_type(),
+            help="enable azure container storage. Can be used as a flag (defaults to True) or with a"
+            " storage pool type value: (azureDisk, ephemeralDisk, elasticSan)",
+        )
+        c.argument(
+            "container_storage_version",
+            arg_type=get_enum_type(container_storage_versions),
+            help="set azure container storage version, the latest version will be installed by default",
         )
         c.argument(
             "storage_pool_name",
@@ -1434,6 +1477,12 @@ def load_arguments(self, _):
             arg_type=get_enum_type(advanced_networkpolicies),
         )
         c.argument(
+            "acns_datapath_acceleration_mode",
+            is_preview=True,
+            arg_type=get_enum_type(acns_datapath_acceleration_modes),
+            help="Specify the performance acceleration mode for ACNS. Available values are 'None' and 'BpfVeth'.",
+        )
+        c.argument(
             "acns_transit_encryption_type",
             is_preview=True,
             arg_type=get_enum_type(transit_encryption_types),
@@ -1454,13 +1503,21 @@ def load_arguments(self, _):
         # azure container storage
         c.argument(
             "enable_azure_container_storage",
-            arg_type=get_enum_type(storage_pool_types),
-            help="enable azure container storage and define storage pool type",
+            arg_type=_get_enable_azure_container_storage_type(),
+            help="enable azure container storage. Can be used as a flag (defaults to True) or with a"
+            " storage pool type value: (azureDisk, ephemeralDisk, elasticSan)",
         )
         c.argument(
             "disable_azure_container_storage",
-            arg_type=get_enum_type(disable_storage_pool_types),
-            help="disable azure container storage or any one of the storage pool types",
+            arg_type=_get_disable_azure_container_storage_type(),
+            help="disable azure container storage or any one of the storage pool types."
+            " Can be used as a flag (defaults to True) or with a storagepool type value:"
+            " azureDisk, ephemeralDisk, elasticSan, all (to disable all storage pools).",
+        )
+        c.argument(
+            "container_storage_version",
+            arg_type=get_enum_type(container_storage_versions),
+            help="set azure container storage version, the latest version will be installed by default",
         )
         c.argument(
             "storage_pool_name",
@@ -1643,7 +1700,7 @@ def load_arguments(self, _):
         )
         c.argument("os_type")
         c.argument(
-            "os_sku", arg_type=get_enum_type(node_os_skus), validator=validate_os_sku
+            "os_sku", arg_type=get_enum_type(node_os_skus_add), validator=validate_os_sku
         )
         c.argument("snapshot_id", validator=validate_snapshot_id)
         c.argument("vnet_subnet_id", validator=validate_vnet_subnet_id)
@@ -1678,12 +1735,20 @@ def load_arguments(self, _):
         c.argument("node_taints", validator=validate_nodepool_taints)
         c.argument("node_osdisk_type", arg_type=get_enum_type(node_os_disk_types))
         c.argument("node_osdisk_size", type=int)
+        # upgrade strategy
+        c.argument("upgrade_strategy", arg_type=get_enum_type(upgrade_strategies))
+        # rolling upgrade params
         c.argument("max_surge", validator=validate_max_surge)
         c.argument("drain_timeout", type=int)
         c.argument("node_soak_duration", type=int)
         c.argument("undrainable_node_behavior")
         c.argument("max_unavailable", validator=validate_max_unavailable)
         c.argument("max_blocked_nodes", validator=validate_max_blocked_nodes)
+        # blue-green upgrade parameters
+        c.argument("drain_batch_size", validator=validate_drain_batch_size)
+        c.argument("drain_timeout_bg", type=int)
+        c.argument("batch_soak_duration", type=int)
+        c.argument("final_soak_duration", type=int)
         c.argument("mode", arg_type=get_enum_type(node_mode_types))
         c.argument("scale_down_mode", arg_type=get_enum_type(scale_down_modes))
         c.argument("max_pods", type=int, options_list=["--max-pods", "-m"])
@@ -1816,12 +1881,20 @@ def load_arguments(self, _):
         c.argument("labels", nargs="*", validator=validate_nodepool_labels)
         c.argument("tags", tags_type)
         c.argument("node_taints", validator=validate_nodepool_taints)
+        # upgrade strategy
+        c.argument("upgrade_strategy", arg_type=get_enum_type(upgrade_strategies))
+        # rolling upgrade parameters
         c.argument("max_surge", validator=validate_max_surge)
         c.argument("drain_timeout", type=int)
         c.argument("node_soak_duration", type=int)
         c.argument("undrainable_node_behavior")
         c.argument("max_unavailable", validator=validate_max_unavailable)
         c.argument("max_blocked_nodes", validator=validate_max_blocked_nodes)
+        # blue-green upgrade parameters
+        c.argument("drain_batch_size", validator=validate_drain_batch_size)
+        c.argument("drain_timeout_bg", type=int)
+        c.argument("batch_soak_duration", type=int)
+        c.argument("final_soak_duration", type=int)
         c.argument("mode", arg_type=get_enum_type(node_mode_types))
         c.argument("scale_down_mode", arg_type=get_enum_type(scale_down_modes))
         # extensions
@@ -1898,12 +1971,20 @@ def load_arguments(self, _):
         )
 
     with self.argument_context("aks nodepool upgrade") as c:
+        # upgrade strategy
+        c.argument("upgrade_strategy", arg_type=get_enum_type(upgrade_strategies))
+        # rolling upgrade parameters
         c.argument("max_surge", validator=validate_max_surge)
         c.argument("drain_timeout", type=int)
         c.argument("node_soak_duration", type=int)
         c.argument("undrainable_node_behavior")
         c.argument("max_unavailable", validator=validate_max_unavailable)
         c.argument("max_blocked_nodes", validator=validate_max_blocked_nodes)
+        # blue-green upgrade parameters
+        c.argument("drain_batch_size", validator=validate_drain_batch_size)
+        c.argument("drain_timeout_bg", type=int)
+        c.argument("batch_soak_duration", type=int)
+        c.argument("final_soak_duration", type=int)
         c.argument("snapshot_id", validator=validate_snapshot_id)
         c.argument(
             "yes",
@@ -1970,7 +2051,7 @@ def load_arguments(self, _):
             "machine_name", help="The machine name."
         )
         c.argument(
-            "os_sku", arg_type=get_enum_type(node_os_skus), validator=validate_os_sku
+            "os_sku", arg_type=get_enum_type(node_os_skus_add), validator=validate_os_sku
         )
         c.argument(
             "zones",
@@ -2849,6 +2930,27 @@ def load_arguments(self, _):
             action="store_true",
         )
 
+    # JWT Authenticator commands
+    with self.argument_context("aks jwtauthenticator") as c:
+        c.argument("cluster_name", help="The cluster name.")
+        c.argument(
+            "aks_custom_headers",
+            help="Send custom headers. When specified, format should be Key1=Value1,Key2=Value2.",
+        )
+
+    for scope in ['aks jwtauthenticator add',
+                  'aks jwtauthenticator update',
+                  'aks jwtauthenticator delete',
+                  'aks jwtauthenticator show']:
+        with self.argument_context(scope) as c:
+            c.argument('name', options_list=['--name', '-n'], required=True, help='Name of the JWT authenticator.')
+
+    for scope in ['aks jwtauthenticator add',
+                  'aks jwtauthenticator update']:
+        with self.argument_context(scope) as c:
+            c.argument('config_file', options_list=['--config-file'], type=file_type, completer=FilesCompleter(),
+                       help='Path to the JSON configuration file containing JWT authenticator properties.')
+
 
 def _get_default_install_location(exe_name):
     system = platform.system()
@@ -2864,3 +2966,65 @@ def _get_default_install_location(exe_name):
     else:
         install_location = None
     return install_location
+
+
+def _get_enable_azure_container_storage_type():
+    """Custom argument type that accepts both None and enum values"""
+    import argparse
+    from azure.cli.core.azclierror import InvalidArgumentValueError
+
+    class AzureContainerStorageAction(argparse.Action):
+        def __call__(self, parser, namespace, values, option_string=None):
+            if values is None:
+                # When used as a flag without value, set as True
+                setattr(namespace, self.dest, True)
+                return
+
+            if isinstance(values, str):
+                # Handle enum values (case insensitive)
+                for storage_type in storage_pool_types:
+                    if values.lower() == storage_type.lower():
+                        setattr(namespace, self.dest, storage_type)
+                        return
+
+            # Invalid value
+            valid_values = storage_pool_types
+            raise InvalidArgumentValueError(
+                f"Invalid value '{values}'. Valid values are: {', '.join(valid_values)}"
+            )
+
+    return CLIArgumentType(
+        nargs='?',  # Optional argument
+        action=AzureContainerStorageAction,
+    )
+
+
+def _get_disable_azure_container_storage_type():
+    """Custom argument type that accepts both None and enum values"""
+    import argparse
+    from azure.cli.core.azclierror import InvalidArgumentValueError
+
+    class AzureContainerStorageAction(argparse.Action):
+        def __call__(self, parser, namespace, values, option_string=None):
+            if values is None:
+                # When used as a flag without value, set as True
+                setattr(namespace, self.dest, True)
+                return
+
+            if isinstance(values, str):
+                # Handle enum values (case insensitive)
+                for storage_type in disable_storage_pool_types:
+                    if values.lower() == storage_type.lower():
+                        setattr(namespace, self.dest, storage_type)
+                        return
+
+            # Invalid value
+            valid_values = disable_storage_pool_types
+            raise InvalidArgumentValueError(
+                f"Invalid value '{values}'. Valid values are: {', '.join(valid_values)}"
+            )
+
+    return CLIArgumentType(
+        nargs='?',  # Optional argument
+        action=AzureContainerStorageAction,
+    )

@@ -118,6 +118,10 @@ from azext_aks_preview.managednamespace import (
 from azext_aks_preview.machine import (
     add_machine,
 )
+from azext_aks_preview.jwtauthenticator import (
+    aks_jwtauthenticator_add_internal,
+    aks_jwtauthenticator_update_internal,
+)
 from azure.cli.command_modules.acs._helpers import (
     get_user_assigned_identity_by_resource_id
 )
@@ -700,6 +704,7 @@ def aks_create(
     acns_advanced_networkpolicies=None,
     acns_transit_encryption_type=None,
     enable_retina_flow_logs=None,
+    acns_datapath_acceleration_mode=None,
     # nodepool
     crg_id=None,
     message_of_the_day=None,
@@ -731,6 +736,7 @@ def aks_create(
     enable_ai_toolchain_operator=False,
     # azure container storage
     enable_azure_container_storage=None,
+    container_storage_version=None,
     storage_pool_name=None,
     storage_pool_size=None,
     storage_pool_sku=None,
@@ -942,6 +948,7 @@ def aks_update(
     acns_transit_encryption_type=None,
     enable_retina_flow_logs=None,
     disable_retina_flow_logs=None,
+    acns_datapath_acceleration_mode=None,
     # metrics profile
     enable_cost_analysis=False,
     disable_cost_analysis=False,
@@ -951,6 +958,7 @@ def aks_update(
     # azure container storage
     enable_azure_container_storage=None,
     disable_azure_container_storage=None,
+    container_storage_version=None,
     storage_pool_name=None,
     storage_pool_size=None,
     storage_pool_sku=None,
@@ -1403,6 +1411,12 @@ def aks_agentpool_add(
     drain_timeout=None,
     node_soak_duration=None,
     undrainable_node_behavior=None,
+    # blue-green upgrade parameters
+    upgrade_strategy=None,
+    drain_batch_size=None,
+    drain_timeout_bg=None,
+    batch_soak_duration=None,
+    final_soak_duration=None,
     max_unavailable=None,
     max_blocked_nodes=None,
     mode=CONST_NODEPOOL_MODE_USER,
@@ -1488,6 +1502,12 @@ def aks_agentpool_update(
     max_surge=None,
     drain_timeout=None,
     node_soak_duration=None,
+    # blue-green upgrade parameters
+    upgrade_strategy=None,
+    drain_batch_size=None,
+    drain_timeout_bg=None,
+    batch_soak_duration=None,
+    final_soak_duration=None,
     undrainable_node_behavior=None,
     max_unavailable=None,
     max_blocked_nodes=None,
@@ -1584,6 +1604,11 @@ def aks_agentpool_upgrade(cmd,
                           max_surge=None,
                           drain_timeout=None,
                           node_soak_duration=None,
+                          upgrade_strategy=None,
+                          drain_batch_size=None,
+                          drain_timeout_bg=None,
+                          batch_soak_duration=None,
+                          final_soak_duration=None,
                           undrainable_node_behavior=None,
                           max_unavailable=None,
                           max_blocked_nodes=None,
@@ -1598,6 +1623,11 @@ def aks_agentpool_upgrade(cmd,
         resource_type=CUSTOM_MGMT_AKS_PREVIEW,
         operation_group="agent_pools",
     )
+    AgentPoolBlueGreenUpgradeSettings = cmd.get_models(
+        "AgentPoolBlueGreenUpgradeSettings",
+        resource_type=CUSTOM_MGMT_AKS_PREVIEW,
+        operation_group="agent_pools",
+    )
     if kubernetes_version != '' and node_image_only:
         raise MutuallyExclusiveArgumentError(
             'Conflicting flags. Upgrading the Kubernetes version will also '
@@ -1605,6 +1635,7 @@ def aks_agentpool_upgrade(cmd,
             'node version please use the "--node-image-only" option only.'
         )
 
+    # TODO: Confirm if this logic still holds up with blue green upgrades
     # Note: we exclude this option because node image upgrade can't accept nodepool put fields like max surge
     hasUpgradeSetting = (
         max_surge or
@@ -1612,18 +1643,28 @@ def aks_agentpool_upgrade(cmd,
         node_soak_duration or
         undrainable_node_behavior or
         max_unavailable or
-        max_blocked_nodes)
+        max_blocked_nodes or
+        upgrade_strategy or
+        drain_batch_size or
+        drain_timeout_bg or
+        batch_soak_duration or
+        final_soak_duration)
     if hasUpgradeSetting and node_image_only:
         raise MutuallyExclusiveArgumentError(
             "Conflicting flags. Unable to specify "
-            "max-surge/drain-timeout/node-soak-duration/undrainable-node-behavior/max-unavailable/max-blocked-nodes"
+            "max-surge/drain-timeout/node-soak-duration/undrainable-node-behavior/max-unavailable/max-blocked-nodes/"
+            "upgrade-strategy/drain-batch-size/drain-timeout-bg/batch-soak-duration/final-soak-duration"
             " with node-image-only.If you want to use "
-            "max-surge/drain-timeout/node-soak-duration/undrainable-node-behavior/max-unavailable/max-blocked-nodes"
+            "max-surge/drain-timeout/node-soak-duration/undrainable-node-behavior/max-unavailable/max-blocked-nodes/"
+            "upgrade-strategy/drain-batch-size/drain-timeout-bg/batch-soak-duration/final-soak-duration"
             " with a node image upgrade, please first update "
-            "max-surge/drain-timeout/node-soak-duration/undrainable-node-behavior/max-unavailable/max-blocked-nodes"
+            "max-surge/drain-timeout/node-soak-duration/"
+            "undrainable-node-behavior/max-unavailable/max-blocked-nodes/"
+            "upgrade-strategy/drain-batch-size/drain-timeout-bg/batch-soak-duration/final-soak-duration"
             " using 'az aks nodepool update "
             "--max-surge/--drain-timeout/--node-soak-duration/"
-            "--undrainable-node-behavior/--max-unavailable/--max-blocked-nodes'."
+            "--undrainable-node-behavior/--max-unavailable/--max-blocked-nodes/"
+            "--upgrade-strategy/--drain-batch-size/--drain-timeout-bg/--batch-soak-duration/--final-soak-duration'."
         )
 
     if node_image_only:
@@ -1672,6 +1713,10 @@ def aks_agentpool_upgrade(cmd,
     instance.orchestrator_version = kubernetes_version
     instance.creation_data = creationData
 
+    if upgrade_strategy:
+        instance.upgrade_strategy = upgrade_strategy
+
+    # Rolling upgrade settings
     if not instance.upgrade_settings:
         instance.upgrade_settings = AgentPoolUpgradeSettings()
 
@@ -1687,6 +1732,19 @@ def aks_agentpool_upgrade(cmd,
         instance.upgrade_settings.max_unavailable = max_unavailable
     if max_blocked_nodes:
         instance.upgrade_settings.max_blocked_nodes = max_blocked_nodes
+
+    # Blue-green upgrade settings
+    if not instance.upgrade_settings_blue_green:
+        instance.upgrade_settings_blue_green = AgentPoolBlueGreenUpgradeSettings()
+
+    if drain_batch_size:
+        instance.upgrade_settings_blue_green.drain_batch_size = drain_batch_size
+    if drain_timeout_bg:
+        instance.upgrade_settings_blue_green.drain_timeout_in_minutes = drain_timeout_bg
+    if batch_soak_duration:
+        instance.upgrade_settings_blue_green.batch_soak_duration_in_minutes = batch_soak_duration
+    if final_soak_duration:
+        instance.upgrade_settings_blue_green.final_soak_duration_in_minutes = final_soak_duration
 
     # custom headers
     aks_custom_headers = extract_comma_separated_string(
@@ -4447,3 +4505,87 @@ aks_identity_binding_create = aks_ib_cmd_create
 aks_identity_binding_delete = aks_ib_cmd_delete
 aks_identity_binding_show = aks_ib_cmd_show
 aks_identity_binding_list = aks_ib_cmd_list
+
+
+# JWT Authenticator commands
+def aks_jwtauthenticator_add(
+        cmd,
+        client,
+        resource_group_name,
+        cluster_name,
+        name,
+        config_file,
+        aks_custom_headers=None,
+        no_wait=False
+):
+    headers = get_aks_custom_headers(aks_custom_headers)
+    existingJWTAuthenticator = None
+    try:
+        existingJWTAuthenticator = client.get(resource_group_name, cluster_name, name, headers=headers)
+    except ResourceNotFoundError:
+        pass
+
+    if existingJWTAuthenticator:
+        raise ClientRequestError(
+            f"JWT Authenticator '{name}' already exists. Please use 'az aks jwtauthenticator update' to update it."
+        )
+
+    raw_parameters = locals()
+    return aks_jwtauthenticator_add_internal(
+        cmd,
+        client,
+        raw_parameters,
+        headers,
+        no_wait,
+    )
+
+
+def aks_jwtauthenticator_update(
+        cmd,
+        client,
+        resource_group_name,
+        cluster_name,
+        name,
+        config_file,
+        aks_custom_headers=None,
+        no_wait=False
+):
+    headers = get_aks_custom_headers(aks_custom_headers)
+    raw_parameters = locals()
+    return aks_jwtauthenticator_update_internal(
+        cmd,
+        client,
+        raw_parameters,
+        headers,
+        no_wait,
+    )
+
+
+def aks_jwtauthenticator_delete(
+        cmd,
+        client,
+        resource_group_name,
+        cluster_name,
+        name,
+        aks_custom_headers=None,
+        no_wait=False
+):
+    headers = get_aks_custom_headers(aks_custom_headers)
+    return sdk_no_wait(
+        no_wait,
+        client.begin_delete,
+        resource_group_name,
+        cluster_name,
+        name,
+        headers=headers,
+    )
+
+
+def aks_jwtauthenticator_list(cmd, client, resource_group_name, cluster_name, aks_custom_headers=None):
+    headers = get_aks_custom_headers(aks_custom_headers)
+    return client.list_by_managed_cluster(resource_group_name, cluster_name, headers=headers)
+
+
+def aks_jwtauthenticator_show(cmd, client, resource_group_name, cluster_name, name, aks_custom_headers=None):
+    headers = get_aks_custom_headers(aks_custom_headers)
+    return client.get(resource_group_name, cluster_name, name, headers=headers)
