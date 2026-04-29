@@ -66,6 +66,13 @@ def hierarchy_create(cmd, resource_group=None, configuration_location=None, hier
     if not level:
         raise ValidationError("hierarchy-spec must include 'level'.")
 
+
+    # ResourceGroup type does not support children -- only ServiceGroup does.
+    if hierarchy_type != "ServiceGroup" and spec.get("children"):
+        raise ValidationError(
+            "ResourceGroup hierarchy does not support 'children'. "
+            "Use type: ServiceGroup for multi-level hierarchies."
+        )
     # Validate all names in the hierarchy
     _validate_hierarchy_names(spec)
 
