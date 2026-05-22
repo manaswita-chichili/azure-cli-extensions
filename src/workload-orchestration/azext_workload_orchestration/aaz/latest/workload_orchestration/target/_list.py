@@ -217,7 +217,6 @@ class List(AAZCommand):
             )
             properties.target_specification = AAZFreeFormDictType(
                 serialized_name="targetSpecification",
-                flags={"required": True},
             )
             properties.context_id = AAZStrType(
                 serialized_name="contextId",
@@ -440,10 +439,7 @@ class List(AAZCommand):
             )
             properties.target_specification = AAZFreeFormDictType(
                 serialized_name="targetSpecification",
-                flags={"required": True},
-            )
-
-            capabilities = cls._schema_on_200.value.Element.properties.capabilities
+            )            capabilities = cls._schema_on_200.value.Element.properties.capabilities
             capabilities.Element = AAZStrType()
 
             status = cls._schema_on_200.value.Element.properties.status
