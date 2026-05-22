@@ -439,7 +439,9 @@ class List(AAZCommand):
             )
             properties.target_specification = AAZFreeFormDictType(
                 serialized_name="targetSpecification",
-            )            capabilities = cls._schema_on_200.value.Element.properties.capabilities
+            )
+
+            capabilities = cls._schema_on_200.value.Element.properties.capabilities
             capabilities.Element = AAZStrType()
 
             status = cls._schema_on_200.value.Element.properties.status
