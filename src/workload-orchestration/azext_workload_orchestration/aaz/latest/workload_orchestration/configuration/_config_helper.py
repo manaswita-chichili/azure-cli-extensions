@@ -39,7 +39,7 @@ class ConfigurationHelper:
         # Convert hierarchy_id to string if it's an AAZ type
         hierarchy_id_str = str(hierarchy_id) if hierarchy_id else ""
         
-        def try_get_config_id(lookup_id, api_version = "2025-08-01"):
+        def try_get_config_id(lookup_id, api_version = "2026-03-01"):
             """Helper function to try getting configuration ID for a given lookup ID"""
             config_ref_url = client.format_url(
                 "{hierarchyId}/providers/Microsoft.Edge/configurationreferences/default",
@@ -70,7 +70,7 @@ class ConfigurationHelper:
                 configurationId=configuration_id
             )
             config_request = client._request("GET", config_url, {
-                "api-version": "2025-08-01"
+                "api-version": "2026-03-01"
             }, {
                 "Accept": "application/json"
             }, None, {}, None)
@@ -166,7 +166,7 @@ class ConfigurationHelper:
                 templateName=template_name
             )
             request = client._request("GET", template_url, {
-                "api-version": "2025-08-01"
+                "api-version": "2026-03-01"
             }, {
                 "Accept": "application/json"
             }, None, {}, None) 
@@ -232,7 +232,7 @@ class ConfigurationHelper:
         try:
             # Make GET request to schema endpoint
             request = client._request("GET", schema_url, {
-                "api-version": "2025-08-01"
+                "api-version": "2026-03-01"
             }, {
                 "Accept": "application/json"
             }, None, {}, None)  # Add missing parameters
@@ -290,7 +290,7 @@ class ConfigurationHelper:
         try:
             # Make GET request to template version endpoint
             request = client._request("GET", template_version_id, {
-                "api-version": "2025-08-01"
+                "api-version": "2026-03-01"
             }, {
                 "Accept": "application/json"
             }, None, {}, None)
@@ -331,7 +331,7 @@ class ConfigurationHelper:
         try:
             # Get target capabilities
             target_request = client._request("GET", hierarchy_id_str, {
-                "api-version": "2025-08-01"
+                "api-version": "2026-03-01"
             }, {
                 "Accept": "application/json"
             }, None, {}, None)
@@ -348,7 +348,7 @@ class ConfigurationHelper:
             solution_template_id = f"/subscriptions/{subscription_id}/resourceGroups/{resource_group}/providers/Microsoft.Edge/solutionTemplates/{template_name}"
             
             solution_request = client._request("GET", solution_template_id, {
-                "api-version": "2025-08-01"
+                "api-version": "2026-03-01"
             }, {
                 "Accept": "application/json"
             }, None, {}, None)
@@ -403,7 +403,7 @@ class ConfigurationHelper:
             metadata_url = f"{config_template_id}/configTemplateMetadatas"
             
             metadata_request = client._request("GET", metadata_url, {
-                "api-version": "2025-08-01"
+                "api-version": "2026-03-01"
             }, {
                 "Accept": "application/json"
             }, None, {}, None)

@@ -81,7 +81,7 @@ class TargetPut(AAZHttpOperation):
     @property
     def query_parameters(self):
         return {
-            **self.serialize_query_param("api-version", "2025-08-01", required=True),
+            **self.serialize_query_param("api-version", "2026-03-01", required=True),
         }
 
     @property
@@ -144,7 +144,7 @@ class TargetGet(AAZHttpOperation):
 
     @property
     def query_parameters(self):
-        return {**self.serialize_query_param("api-version", "2025-08-01", required=True)}
+        return {**self.serialize_query_param("api-version", "2026-03-01", required=True)}
 
     @property
     def header_parameters(self):
@@ -271,7 +271,7 @@ class TargetInstallSolution(AAZHttpOperation):
     @property
     def query_parameters(self):
         return {
-            **self.serialize_query_param("api-version", "2025-08-01", required=True),
+            **self.serialize_query_param("api-version", "2026-03-01", required=True),
         }
 
     @property
@@ -317,7 +317,7 @@ class UpdateConfigWithRegistryIp(AAZHttpOperation):
         # Step 1: GET the target solution version to find solutionTemplateVersionId
         sv_url = self.client.format_url("{svId}", svId=self._solution_version_id)
         sv_req = self.client._request(
-            "GET", sv_url, {"api-version": "2025-08-01"}, {"Accept": "application/json"}, None, {}, None
+            "GET", sv_url, {"api-version": "2026-03-01"}, {"Accept": "application/json"}, None, {}, None
         )
         sv_resp = self.client.send_request(request=sv_req, stream=False)
         if sv_resp.http_response.status_code != 200:
@@ -347,7 +347,7 @@ class UpdateConfigWithRegistryIp(AAZHttpOperation):
         # URL pattern (mirrors _config_set.py): {configId}/dynamicConfigurations/{uniqueId}/versions/{version}
         dcv_url = f"{config_id}/dynamicConfigurations/{solution_unique_id}/versions/{template_version}"
         dcv_req = self.client._request(
-            "GET", dcv_url, {"api-version": "2025-08-01"}, {"Accept": "application/json"}, None, {}, None
+            "GET", dcv_url, {"api-version": "2026-03-01"}, {"Accept": "application/json"}, None, {}, None
         )
         dcv_resp = self.client.send_request(request=dcv_req, stream=False)
 
@@ -380,7 +380,7 @@ class UpdateConfigWithRegistryIp(AAZHttpOperation):
         serialized_body = self.serialize_content(body)
         put_req = self.client._request(
             "PUT", dcv_url,
-            {"api-version": "2025-08-01"},
+            {"api-version": "2026-03-01"},
             {"Content-Type": "application/json", "Accept": "application/json"},
             serialized_body, {}, None
         )
@@ -466,7 +466,7 @@ class ReviewStagedSolutionVersion(AAZHttpOperation):
 
     @property
     def query_parameters(self):
-        return {**self.serialize_query_param("api-version", "2025-08-01", required=True)}
+        return {**self.serialize_query_param("api-version", "2026-03-01", required=True)}
 
     @property
     def header_parameters(self):
@@ -534,7 +534,7 @@ class PublishStagedSolutionVersion(AAZHttpOperation):
 
     @property
     def query_parameters(self):
-        return {**self.serialize_query_param("api-version", "2025-08-01", required=True)}
+        return {**self.serialize_query_param("api-version", "2026-03-01", required=True)}
 
     @property
     def header_parameters(self):

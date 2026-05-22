@@ -27,10 +27,10 @@ class Show(AAZCommand):
     """
 
     _aaz_info = {
-        "version": "2025-08-01",
+        "version": "2026-03-01",
         "resources": [
-            ["mgmt-plane", "/subscriptions/{}/resourcegroups/{}/providers/Microsoft.Edge/configTemplates/{}/versions/{}/configTemplateSchemas/default", "2025-08-01"],
-            ["mgmt-plane", "/subscriptions/{}/resourcegroups/{}/providers/Microsoft.Edge/solutionTemplates/{}/versions/{}/solutionSchemas/default", "2025-08-01"],
+            ["mgmt-plane", "/subscriptions/{}/resourcegroups/{}/providers/Microsoft.Edge/configTemplates/{}/versions/{}/configTemplateSchemas/default", "2026-03-01"],
+            ["mgmt-plane", "/subscriptions/{}/resourcegroups/{}/providers/Microsoft.Edge/solutionTemplates/{}/versions/{}/solutionSchemas/default", "2026-03-01"],
         ]
     }
 

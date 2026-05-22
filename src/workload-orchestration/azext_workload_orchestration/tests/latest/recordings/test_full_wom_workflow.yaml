@@ -15,7 +15,7 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/Mehoopany/providers/Microsoft.Edge/contexts/Mehoopany-Context?api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/Mehoopany/providers/Microsoft.Edge/contexts/Mehoopany-Context?api-version=2026-03-01
   response:
     body:
       string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/Mehoopany/providers/Microsoft.Edge/contexts/Mehoopany-Context","name":"Mehoopany-Context","type":"microsoft.edge/contexts","location":"eastus2euap","tags":{},"systemData":{"lastModifiedBy":"e6ed84e9-6459-4861-bb95-5435f44861ce","lastModifiedByType":"Application","lastModifiedAt":"2025-12-15T14:05:41.6928367Z"},"properties":{"capabilities":[{"name":"ARB_Test_1_8350f6dad78c84fc65ad2a38fe46999f","description":"ARB
@@ -663,7 +663,7 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/Mehoopany/providers/Microsoft.Edge/contexts/Mehoopany-Context?api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/Mehoopany/providers/Microsoft.Edge/contexts/Mehoopany-Context?api-version=2026-03-01
   response:
     body:
       string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/Mehoopany/providers/Microsoft.Edge/contexts/Mehoopany-Context","name":"Mehoopany-Context","type":"microsoft.edge/contexts","location":"eastus2euap","tags":{},"systemData":{"lastModifiedBy":"test@example.com","lastModifiedByType":"User","lastModifiedAt":"2025-12-15T14:06:57.1455753Z"},"properties":{"capabilities":[{"name":"ARB_Test_1_8350f6dad78c84fc65ad2a38fe46999f","description":"ARB
@@ -855,7 +855,7 @@ interactions:
         Testing"},{"name":"e2eTest-line-Cap-1327","description":"e2eTest-line-Cap-1327"},{"name":"e2eTest-factory-Cap-1327","description":"e2eTest-factory-Cap-1327"},{"name":"Test_0_fb30c1b66445b94b35cd63045964a67b","description":"Testing"},{"name":"Test_1_fb30c1b66445b94b35cd63045964a67b","description":"Testing"},{"name":"Test_0_99fcb49857f9acbc869bdd9f6863741f","description":"Testing"},{"name":"Test_1_99fcb49857f9acbc869bdd9f6863741f","description":"Testing"},{"name":"Test_0_2af09fc5d724e403bea423ff16580ee0","description":"Testing"},{"name":"Test_1_2af09fc5d724e403bea423ff16580ee0","description":"Testing"},{"name":"Test_0_b6221d269ce1e373d269a67e0020ae9f","description":"Testing"},{"name":"Test_1_b6221d269ce1e373d269a67e0020ae9f","description":"Testing"},{"name":"Test_0_6bc8e076ba5828fb87c84d7d41283dec","description":"Testing"},{"name":"Test_1_6bc8e076ba5828fb87c84d7d41283dec","description":"Testing"},{"name":"Test_0_b0b5dac06ab200017cd70cac8c2d6975","description":"Testing"},{"name":"Test_1_b0b5dac06ab200017cd70cac8c2d6975","description":"Testing"},{"name":"Test_0_4b6e534e718156b59a40dff37b586e13","description":"Testing"},{"name":"Test_1_4b6e534e718156b59a40dff37b586e13","description":"Testing"},{"name":"Test_0_bd712ff02af98f66964f41aaf83730db","description":"Testing"},{"name":"Test_1_bd712ff02af98f66964f41aaf83730db","description":"Testing"},{"name":"Test_0_d5f057ca654a232772a4aa5530713cb5","description":"Testing"},{"name":"Test_1_d5f057ca654a232772a4aa5530713cb5","description":"Testing"},{"name":"Test_0_8f8b200dd045fd978c536358cc5e78b6","description":"Testing"},{"name":"Test_1_8f8b200dd045fd978c536358cc5e78b6","description":"Testing"}],"hierarchies":[{"name":"country","description":"Country"},{"name":"region","description":"Region"},{"name":"factory","description":"Factory"},{"name":"line","description":"Line"}],"provisioningState":"Succeeded"}}'
     headers:
       api-supported-versions:
-      - 2025-01-01-preview, 2025-06-01, 2025-08-01
+      - 2025-01-01-preview, 2025-06-01, 2026-03-01
       cache-control:
       - no-cache
       content-length:
@@ -909,7 +909,7 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/Mehoopany/providers/Microsoft.Edge/contexts?api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/Mehoopany/providers/Microsoft.Edge/contexts?api-version=2026-03-01
   response:
     body:
       string: '{"value":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/Mehoopany/providers/Microsoft.Edge/contexts/Mehoopany-Context","name":"Mehoopany-Context","type":"microsoft.edge/contexts","location":"eastus2euap","tags":{},"systemData":{"lastModifiedBy":"test@example.com","lastModifiedByType":"User","lastModifiedAt":"2025-12-15T14:06:57.1455753Z"},"properties":{"capabilities":[{"name":"ARB_Test_1_8350f6dad78c84fc65ad2a38fe46999f","description":"ARB
@@ -1149,7 +1149,7 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/schemas/cliwdx6u-schema?api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/schemas/cliwdx6u-schema?api-version=2026-03-01
   response:
     body:
       string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/schemas/cliwdx6u-schema","name":"cliwdx6u-schema","type":"microsoft.edge/schemas","location":"eastus2euap","systemData":{"createdBy":"test@example.com","createdByType":"User","createdAt":"2025-12-15T14:07:08.3878428Z","lastModifiedBy":"test@example.com","lastModifiedByType":"User","lastModifiedAt":"2025-12-15T14:07:08.3878428Z"},"properties":{"provisioningState":"Succeeded"}}'
@@ -1218,13 +1218,13 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: POST
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/schemas/cliwdx6u-schema/createVersion?api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/schemas/cliwdx6u-schema/createVersion?api-version=2026-03-01
   response:
     body:
       string: 'null'
     headers:
       api-supported-versions:
-      - 2024-06-01-preview, 2024-08-01-preview, 2025-01-01-preview, 2025-06-01, 2025-08-01
+      - 2024-06-01-preview, 2024-08-01-preview, 2025-01-01-preview, 2025-06-01, 2026-03-01
       azure-asyncoperation:
       - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Edge/locations/EASTUS2EUAP/operationStatuses/9540fb5a-778f-404b-947d-22c4a204e60e*BFFB0285BECDB58C67251F0EFCC81A8F3BE734CC4A2720C07C80F8972275899B?api-version=2023-07-01-preview&t=639014044312470411&c=MIIIrzCCBpegAwIBAgITUQFCmjDFW2ad-G6vagABAUKaMDANBgkqhkiG9w0BAQsFADBEMRMwEQYKCZImiZPyLGQBGRYDR0JMMRMwEQYKCZImiZPyLGQBGRYDQU1FMRgwFgYDVQQDEw9BTUUgSW5mcmEgQ0EgMDQwHhcNMjUxMDIzMTMyODI2WhcNMjYwNDIxMTMyODI2WjBAMT4wPAYDVQQDEzVhc3luY29wZXJhdGlvbnNpZ25pbmdjZXJ0aWZpY2F0ZS5tYW5hZ2VtZW50LmF6dXJlLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOuboi1dcXBvQvebjAWnATr4x0pBiJ_9Z5p_9sMApobamRIbVqAn0bWMbxKh4ZGZXWPkD_Z0tHf3HcwDV8HAtRb94yCmlJ91FdUPwdvearZ_p7x4hhAOMY6PMSui6rVU2onWK8cZIHGUJjpGyQdnoAZqokXu-Sh7NdGtzihCGhOqtGNRif_bUqIgsF6xXbK7ihVnoU5ielifEDYvAaIckyRys6btj7aexNQMm_KsR1ERcA31AQddvA12DH2voLLuz_yS_6fdqH07yLNqyB3ZhRrYaUTOJ1ntszxcTJ4NGCYcoHxg2qEx0sVbRqSWzReTB9ttPjV7mEsR8fsiLfYrVB0CAwEAAaOCBJwwggSYMCcGCSsGAQQBgjcVCgQaMBgwCgYIKwYBBQUHAwEwCgYIKwYBBQUHAwIwPQYJKwYBBAGCNxUHBDAwLgYmKwYBBAGCNxUIhpDjDYTVtHiE8Ys-hZvdFs6dEoFghfmRS4WsmTQCAWQCAQcwggHkBggrBgEFBQcBAQSCAdYwggHSMGgGCCsGAQUFBzAChlxodHRwOi8vY3JsLm1pY3Jvc29mdC5jb20vcGtpaW5mcmEvQ2VydHMvbWVsMDFwa2lpbnRjYTAxLkFNRS5HQkxfQU1FJTIwSW5mcmElMjBDQSUyMDA0KDEpLmNydDBYBggrBgEFBQcwAoZMaHR0cDovL2NybDEuYW1lLmdibC9haWEvbWVsMDFwa2lpbnRjYTAxLkFNRS5HQkxfQU1FJTIwSW5mcmElMjBDQSUyMDA0KDEpLmNydDBYBggrBgEFBQcwAoZMaHR0cDovL2NybDIuYW1lLmdibC9haWEvbWVsMDFwa2lpbnRjYTAxLkFNRS5HQkxfQU1FJTIwSW5mcmElMjBDQSUyMDA0KDEpLmNydDBYBggrBgEFBQcwAoZMaHR0cDovL2NybDMuYW1lLmdibC9haWEvbWVsMDFwa2lpbnRjYTAxLkFNRS5HQkxfQU1FJTIwSW5mcmElMjBDQSUyMDA0KDEpLmNydDBYBggrBgEFBQcwAoZMaHR0cDovL2NybDQuYW1lLmdibC9haWEvbWVsMDFwa2lpbnRjYTAxLkFNRS5HQkxfQU1FJTIwSW5mcmElMjBDQSUyMDA0KDEpLmNydDAdBgNVHQ4EFgQUiSQhKXhpKn7Xg7zG2N38FkGays0wDgYDVR0PAQH_BAQDAgWgMIIBNQYDVR0fBIIBLDCCASgwggEkoIIBIKCCARyGQmh0dHA6Ly9jcmwubWljcm9zb2Z0LmNvbS9wa2lpbmZyYS9DUkwvQU1FJTIwSW5mcmElMjBDQSUyMDA0KDEpLmNybIY0aHR0cDovL2NybDEuYW1lLmdibC9jcmwvQU1FJTIwSW5mcmElMjBDQSUyMDA0KDEpLmNybIY0aHR0cDovL2NybDIuYW1lLmdibC9jcmwvQU1FJTIwSW5mcmElMjBDQSUyMDA0KDEpLmNybIY0aHR0cDovL2NybDMuYW1lLmdibC9jcmwvQU1FJTIwSW5mcmElMjBDQSUyMDA0KDEpLmNybIY0aHR0cDovL2NybDQuYW1lLmdibC9jcmwvQU1FJTIwSW5mcmElMjBDQSUyMDA0KDEpLmNybDCBnQYDVR0gBIGVMIGSMAwGCisGAQQBgjd7AQEwZgYKKwYBBAGCN3sCAjBYMFYGCCsGAQUFBwICMEoeSAAzADMAZQAwADEAOQAyADEALQA0AGQANgA0AC0ANABmADgAYwAtAGEAMAA1ADUALQA1AGIAZABhAGYAZgBkADUAZQAzADMAZDAMBgorBgEEAYI3ewMCMAwGCisGAQQBgjd7BAIwHwYDVR0jBBgwFoAUOXFdqRUQLcTffi9ZbkBNwN_vNpowHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMA0GCSqGSIb3DQEBCwUAA4ICAQBLyJ8Ui2iEMJU3hMEnAPrp5g1UE822y4j-WlOmNcv4RcPLuwaAB5ag3d4s0pXH2JflQreXuPdx_asdgqh4RVOPeQA10B2GhLH88ugNTreCho6QHshADGDfoTqoKUJobZWSZ5sRf20yLH-Huky7ZXlSr-unDGy416lIOi8sPLfezE8Nmvd8-uI6WhY037nbexRLG0ynX22sfDlaRKO3dshzC7RcMf5UeUMx7MqeryGNT5Oy-GzPhoXXotuxL6d6KENDTFpTtA8VnbEtAONH4-lhX-yqSgDlSU3PkMcsML9L8C0kdF_Yr9IlCvYMg5A9XxOT2F6W0NR6mms7ju-BNZpKt06mCjl09sAFUAwAYibeIpbXHGg9rZCCFqTjBqFJqrTcURhbOBsmOV1PUOlC4vBpyh6eqKwm9VtP9erCcQ0e20ojH0Yh5-An7Pp29KvETv7C7Va9pqX4SSqyBSCrDpc7lb_ZAKzd9PstLko-ZlIWNhyOVGr_4BzhaooprK8DZeEAgrkdGs3C69SF2OcZn9VQkbeV_tkvOxpRppWlIK5A4cllGt5uQIITli-MjzUGpaNJW-EztsIelC53QGU4hq0To6N990-6yz3P2xv7kW93lNUH-anM5KUpC1C_DCld_OTPlBL02kBshXYE5kwZJkmeXhyIUpCkTUc_YqaXuEIoTQ&s=iP1szoW3cUBOl45ddJ8z7-lAk7qk4parSc-jZZc_HunmEIgA4OV_hH1QfcjiBu8XfhDowayDJQ4vIPr5HklN0sGdiT2uiQbVumD1hmi3H5dOQErzzDQLenW7PpzkvfvMxibrF_PcS9ThMaSz4x5hi67YBRoJG8o96TINPEI5VrS8BL1_0xRmrK4RjOEKPJRIKimYSqHfWfJxrd73hQsXxcFep563_n5rhLP0_pixIpc8Vbu-DaqTKRN7xcm-v8kd-KROTqm3_KugPJ5i9Kuh3qLEbwgwNd_uE_xoYtn_XRCY_5N0F7LsLfgGh9yss6oG_iicmUlwTvU4wFmiwTs5zA&h=1IaUoOzvFqjhwkPMoU9Nyi6tmhQixjl34EYmoEMvplQ
       cache-control:
@@ -1466,7 +1466,7 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/solutionTemplates/cliwdx6u-solution-cli?api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/solutionTemplates/cliwdx6u-solution-cli?api-version=2026-03-01
   response:
     body:
       string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/solutionTemplates/cliwdx6u-solution-cli","name":"cliwdx6u-solution-cli","type":"microsoft.edge/solutiontemplates","location":"eastus2euap","tags":{},"systemData":{"createdBy":"test@example.com","createdByType":"User","createdAt":"2025-12-15T14:07:44.5588446Z","lastModifiedBy":"test@example.com","lastModifiedByType":"User","lastModifiedAt":"2025-12-15T14:07:44.5588446Z"},"properties":{"uniqueIdentifier":"cliwdx6u-solution-cli","description":"This
@@ -1540,7 +1540,7 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: POST
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/solutionTemplates/cliwdx6u-solution-cli/createVersion?api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/solutionTemplates/cliwdx6u-solution-cli/createVersion?api-version=2026-03-01
   response:
     body:
       string: 'null'
@@ -1757,7 +1757,7 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/solutionTemplates/cliwdx6u-solution-cli?api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/solutionTemplates/cliwdx6u-solution-cli?api-version=2026-03-01
   response:
     body:
       string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/solutionTemplates/cliwdx6u-solution-cli","name":"cliwdx6u-solution-cli","type":"microsoft.edge/solutiontemplates","location":"eastus2euap","tags":{},"systemData":{"createdBy":"test@example.com","createdByType":"User","createdAt":"2025-12-15T14:07:44.5588446Z","lastModifiedBy":"cba491bc-48c0-44a6-a6c7-23362a7f54a9","lastModifiedByType":"Application","lastModifiedAt":"2025-12-15T14:08:00.5906796Z"},"properties":{"uniqueIdentifier":"cliwdx6u-solution-cli","description":"This
@@ -1808,7 +1808,7 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/solutionTemplates?api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/solutionTemplates?api-version=2026-03-01
   response:
     body:
       string: '{"value":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/solutionTemplates/cliwdx6u-solution-cli","name":"cliwdx6u-solution-cli","type":"microsoft.edge/solutiontemplates","location":"eastus2euap","tags":{},"systemData":{"createdBy":"test@example.com","createdByType":"User","createdAt":"2025-12-15T14:07:44.5588446Z","lastModifiedBy":"cba491bc-48c0-44a6-a6c7-23362a7f54a9","lastModifiedByType":"Application","lastModifiedAt":"2025-12-15T14:08:00.5906796Z"},"properties":{"uniqueIdentifier":"cliwdx6u-solution-cli","description":"This
@@ -1859,7 +1859,7 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/Mehoopany/providers/Microsoft.Edge/contexts/Mehoopany-Context?api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/Mehoopany/providers/Microsoft.Edge/contexts/Mehoopany-Context?api-version=2026-03-01
   response:
     body:
       string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/Mehoopany/providers/Microsoft.Edge/contexts/Mehoopany-Context","name":"Mehoopany-Context","type":"microsoft.edge/contexts","location":"eastus2euap","tags":{},"systemData":{"lastModifiedBy":"e6ed84e9-6459-4861-bb95-5435f44861ce","lastModifiedByType":"Application","lastModifiedAt":"2025-12-15T14:07:57.4823604Z"},"properties":{"capabilities":[{"name":"ARB_Test_1_8350f6dad78c84fc65ad2a38fe46999f","description":"ARB
@@ -2107,14 +2107,14 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/targets/cliwdx6u-mk78?api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/targets/cliwdx6u-mk78?api-version=2026-03-01
   response:
     body:
       string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/targets/cliwdx6u-mk78","name":"cliwdx6u-mk78","type":"microsoft.edge/targets","location":"eastus2euap","extendedLocation":{"name":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-C/providers/Microsoft.ExtendedLocation/customLocations/BVT-Test-Location","type":"CustomLocation"},"systemData":{"createdBy":"test@example.com","createdByType":"User","createdAt":"2025-12-15T14:08:35.9361906Z","lastModifiedBy":"test@example.com","lastModifiedByType":"User","lastModifiedAt":"2025-12-15T14:08:35.9361906Z"},"properties":{"capabilities":["cliwdx6u-Shampoo"],"contextId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/Mehoopany/providers/Microsoft.Edge/contexts/Mehoopany-Context","description":"This
         is MK-71 Site","displayName":"cliwdx6u-mk78","hierarchyLevel":"line","solutionScope":"new","targetSpecification":{"scope":"default","topologies":[{"bindings":[{"provider":"providers.target.helm","role":"helm.v3","config":{"inCluster":"true"}}]}]},"provisioningState":"Accepted"}}'
     headers:
       api-supported-versions:
-      - 2025-01-01-preview, 2025-06-01, 2025-08-01
+      - 2025-01-01-preview, 2025-06-01, 2026-03-01
       azure-asyncoperation:
       - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Edge/locations/EASTUS2EUAP/operationStatuses/ddeb0a59-01b1-4fd1-a56f-43c954d1e127*8630B338494071C23254A298947ABAEFA16DEA6279BB572500AA1511CF92A289?api-version=2023-07-01-preview&t=639014045189986905&c=MIIHhzCCBm-gAwIBAgITfAlY2NhYWz_rkiYT0gAACVjY2DANBgkqhkiG9w0BAQsFADBEMRMwEQYKCZImiZPyLGQBGRYDR0JMMRMwEQYKCZImiZPyLGQBGRYDQU1FMRgwFgYDVQQDEw9BTUUgSW5mcmEgQ0EgMDUwHhcNMjUxMDE5MDMwMTUzWhcNMjYwNDE3MDMwMTUzWjBAMT4wPAYDVQQDEzVhc3luY29wZXJhdGlvbnNpZ25pbmdjZXJ0aWZpY2F0ZS5tYW5hZ2VtZW50LmF6dXJlLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALb7q8LgkqS_7Sa915WSEvu_LerzErVZMTTkw7KXLAdnIWMjvrOw1RefK_Xe_cFp1_e2xVZM1Zog0tE-_XlllqRwZapoZJTL14Kmh7C0GvefEv-5GdvOnMy695cBHvQJTv1mqxiuvsmhJdB5__zphMuTvy0lF2K1ceor52XBk_VLEQtBcMhz8UUKVZ2KboqO1b56fjCSzbjn-sv5cQ7zx0_GZYADJbddS7dvpIwmb3QZzHcEcbAec_ouQ-YyxmKTpGa17K6DB_CoquSZ2A0TRHJqBpgeGjL0b652ekPbj9oy-sOOusDnwfN95QPWCJFjmNz1aKdnUhXmx8FU134pOkUCAwEAAaOCBHQwggRwMCcGCSsGAQQBgjcVCgQaMBgwCgYIKwYBBQUHAwEwCgYIKwYBBQUHAwIwPQYJKwYBBAGCNxUHBDAwLgYmKwYBBAGCNxUIhpDjDYTVtHiE8Ys-hZvdFs6dEoFghfmRS4WsmTQCAWQCAQcwggHLBggrBgEFBQcBAQSCAb0wggG5MGMGCCsGAQUFBzAChldodHRwOi8vY3JsLm1pY3Jvc29mdC5jb20vcGtpaW5mcmEvQ2VydHMvQ08xUEtJSU5UQ0EwMS5BTUUuR0JMX0FNRSUyMEluZnJhJTIwQ0ElMjAwNS5jcnQwUwYIKwYBBQUHMAKGR2h0dHA6Ly9jcmwxLmFtZS5nYmwvYWlhL0NPMVBLSUlOVENBMDEuQU1FLkdCTF9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3J0MFMGCCsGAQUFBzAChkdodHRwOi8vY3JsMi5hbWUuZ2JsL2FpYS9DTzFQS0lJTlRDQTAxLkFNRS5HQkxfQU1FJTIwSW5mcmElMjBDQSUyMDA1LmNydDBTBggrBgEFBQcwAoZHaHR0cDovL2NybDMuYW1lLmdibC9haWEvQ08xUEtJSU5UQ0EwMS5BTUUuR0JMX0FNRSUyMEluZnJhJTIwQ0ElMjAwNS5jcnQwUwYIKwYBBQUHMAKGR2h0dHA6Ly9jcmw0LmFtZS5nYmwvYWlhL0NPMVBLSUlOVENBMDEuQU1FLkdCTF9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3J0MB0GA1UdDgQWBBSi0lU0HWkl1SHwyRBzQPtbjPmHfTAOBgNVHQ8BAf8EBAMCBaAwggEmBgNVHR8EggEdMIIBGTCCARWgggERoIIBDYY_aHR0cDovL2NybC5taWNyb3NvZnQuY29tL3BraWluZnJhL0NSTC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsMS5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsMi5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsMy5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsNC5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JsMIGdBgNVHSAEgZUwgZIwDAYKKwYBBAGCN3sBATBmBgorBgEEAYI3ewICMFgwVgYIKwYBBQUHAgIwSh5IADMAMwBlADAAMQA5ADIAMQAtADQAZAA2ADQALQA0AGYAOABjAC0AYQAwADUANQAtADUAYgBkAGEAZgBmAGQANQBlADMAMwBkMAwGCisGAQQBgjd7AwIwDAYKKwYBBAGCN3sEAjAfBgNVHSMEGDAWgBR61hmFKHlscXYeYPjzS--iBUIWHTAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDQYJKoZIhvcNAQELBQADggEBACdnVC4tNlyw3EyuiJTFX5692Q_SgsQB7SjH2__G8q1XVJ0GiNSI4NKXoC8rVoxrLDL28sgifuyaEjoA9IYoahBs9l6DzxOxA0fDaBOTteaFuniOzVtW6WubmshP_yDd1pFPJydCOEtgKApCNY8y5eo8GzdatHpMEID7E2ZDrxTnq7PtzLXpoeF0A5W6qhqGypYabh7ugJ5-R8hb1iOlFYy2yvCrBaAW9wwnUPpO3DQRyoxnbzomyTIbrxEJuuaalADYKnu7GVtfL43Srrrx_HEfhy1rsf0ZK9CmJ64NOTHXIRG0kYIl5LhwZVZSEDqBPTAAy9oAm1i5D1jbVw2FPF8&s=VRu2IltvUEezm931NucgCK4Id9shLirhPeyYbp2FJ36w-nnh1wfjOOrGFnNIwtcRG1JZe4ya-qp-9JVnF-Thv8J2IGGLqTgx5hZ1v97YAA3ae5Q7vu20mFN1k7xR4CEZ4Q3eECoFzelrkTafl2NFmf3qiBX65gepHGiYExOYEQRcBARqM1_xFmo6aZsHLLl-gKGeoGIFLUKoA71HBhMJa4a-_hzvhOMMLo4rzdVaElLw_2VS0tsdqlak2Mr_GzOygVwtq-ZG4EdosHuK0XGjFC_oa7Y2EA7ecaXvo2jBqBwH3cPNxNNDhPFvIWB67p6IHscafimnZbO8DSxHK2EVkg&h=Va5oUHeI7xE3hRBSi3kBhepjEkR68mH6AaghaiQF_3s
       cache-control:
@@ -2278,7 +2278,7 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/targets/cliwdx6u-mk78?api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/targets/cliwdx6u-mk78?api-version=2026-03-01
   response:
     body:
       string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/targets/cliwdx6u-mk78","name":"cliwdx6u-mk78","type":"microsoft.edge/targets","location":"eastus2euap","extendedLocation":{"name":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-C/providers/Microsoft.ExtendedLocation/customLocations/BVT-Test-Location","type":"CustomLocation"},"systemData":{"createdBy":"test@example.com","createdByType":"User","createdAt":"2025-12-15T14:08:35.9361906Z","lastModifiedBy":"319f651f-7ddb-4fc6-9857-7aef9250bd05","lastModifiedByType":"Application","lastModifiedAt":"2025-12-15T14:08:45.5869887Z"},"properties":{"capabilities":["cliwdx6u-Shampoo"],"contextId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/Mehoopany/providers/Microsoft.Edge/contexts/Mehoopany-Context","description":"This
@@ -2329,7 +2329,7 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/targets/cliwdx6u-mk78?api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/targets/cliwdx6u-mk78?api-version=2026-03-01
   response:
     body:
       string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/targets/cliwdx6u-mk78","name":"cliwdx6u-mk78","type":"microsoft.edge/targets","location":"eastus2euap","extendedLocation":{"name":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-C/providers/Microsoft.ExtendedLocation/customLocations/BVT-Test-Location","type":"CustomLocation"},"systemData":{"createdBy":"test@example.com","createdByType":"User","createdAt":"2025-12-15T14:08:35.9361906Z","lastModifiedBy":"319f651f-7ddb-4fc6-9857-7aef9250bd05","lastModifiedByType":"Application","lastModifiedAt":"2025-12-15T14:08:45.5869887Z"},"properties":{"capabilities":["cliwdx6u-Shampoo"],"contextId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/Mehoopany/providers/Microsoft.Edge/contexts/Mehoopany-Context","description":"This
@@ -2380,7 +2380,7 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/targets/cliwdx6u-mk78/providers/Microsoft.Edge/configurationreferences/default?api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/targets/cliwdx6u-mk78/providers/Microsoft.Edge/configurationreferences/default?api-version=2026-03-01
   response:
     body:
       string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/targets/cliwdx6u-mk78/providers/Microsoft.Edge/configurationreferences/default","name":"default","type":"microsoft.edge/configurationreferences","systemData":{"createdBy":"cba491bc-48c0-44a6-a6c7-23362a7f54a9","createdByType":"Application","createdAt":"2025-12-15T14:08:38.0622457Z","lastModifiedBy":"cba491bc-48c0-44a6-a6c7-23362a7f54a9","lastModifiedByType":"Application","lastModifiedAt":"2025-12-15T14:08:38.0622457Z"},"properties":{"configurationResourceId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/configurations/cliwdx6u-mk78","provisioningState":"Succeeded"}}'
@@ -2432,7 +2432,7 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/configurations/cliwdx6u-mk78?api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/configurations/cliwdx6u-mk78?api-version=2026-03-01
   response:
     body:
       string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/configurations/cliwdx6u-mk78","name":"cliwdx6u-mk78","type":"microsoft.edge/configurations","location":"eastus2euap","tags":{},"systemData":{"createdBy":"cba491bc-48c0-44a6-a6c7-23362a7f54a9","createdByType":"Application","createdAt":"2025-12-15T14:08:37.8738384Z","lastModifiedBy":"cba491bc-48c0-44a6-a6c7-23362a7f54a9","lastModifiedByType":"Application","lastModifiedAt":"2025-12-15T14:08:37.8738384Z"},"properties":{"provisioningState":"Succeeded"}}'
@@ -2482,7 +2482,7 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/solutionTemplates/cliwdx6u-solution-cli?api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/solutionTemplates/cliwdx6u-solution-cli?api-version=2026-03-01
   response:
     body:
       string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/solutionTemplates/cliwdx6u-solution-cli","name":"cliwdx6u-solution-cli","type":"microsoft.edge/solutiontemplates","location":"eastus2euap","tags":{},"systemData":{"createdBy":"test@example.com","createdByType":"User","createdAt":"2025-12-15T14:07:44.5588446Z","lastModifiedBy":"cba491bc-48c0-44a6-a6c7-23362a7f54a9","lastModifiedByType":"Application","lastModifiedAt":"2025-12-15T14:08:00.5906796Z"},"properties":{"uniqueIdentifier":"cliwdx6u-solution-cli","description":"This
@@ -2533,7 +2533,7 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/configurations/cliwdx6u-mk78/dynamicConfigurations/cliwdx6u-solution-cli/versions/1.0.0?api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/configurations/cliwdx6u-mk78/dynamicConfigurations/cliwdx6u-solution-cli/versions/1.0.0?api-version=2026-03-01
   response:
     body:
       string: '{"error":{"code":"ResourceNotFound","message":"The resource ''Microsoft.Edge/configurations/cliwdx6u-mk78/dynamicConfigurations/cliwdx6u-solution-cli/versions/1.0.0''
@@ -2586,7 +2586,7 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/solutionTemplates/cliwdx6u-solution-cli/versions/1.0.0?api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/solutionTemplates/cliwdx6u-solution-cli/versions/1.0.0?api-version=2026-03-01
   response:
     body:
       string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/solutionTemplates/cliwdx6u-solution-cli/versions/1.0.0","name":"1.0.0","type":"microsoft.edge/solutiontemplates/versions","systemData":{"createdBy":"cba491bc-48c0-44a6-a6c7-23362a7f54a9","createdByType":"Application","createdAt":"2025-12-15T14:07:58.5438742Z","lastModifiedBy":"cba491bc-48c0-44a6-a6c7-23362a7f54a9","lastModifiedByType":"Application","lastModifiedAt":"2025-12-15T14:08:00.3251038Z"},"properties":{"configurations":"schema:\n  name:
@@ -2644,7 +2644,7 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/targets/cliwdx6u-mk78?api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/targets/cliwdx6u-mk78?api-version=2026-03-01
   response:
     body:
       string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/targets/cliwdx6u-mk78","name":"cliwdx6u-mk78","type":"microsoft.edge/targets","location":"eastus2euap","extendedLocation":{"name":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-C/providers/Microsoft.ExtendedLocation/customLocations/BVT-Test-Location","type":"CustomLocation"},"systemData":{"createdBy":"test@example.com","createdByType":"User","createdAt":"2025-12-15T14:08:35.9361906Z","lastModifiedBy":"319f651f-7ddb-4fc6-9857-7aef9250bd05","lastModifiedByType":"Application","lastModifiedAt":"2025-12-15T14:08:45.5869887Z"},"properties":{"capabilities":["cliwdx6u-Shampoo"],"contextId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/Mehoopany/providers/Microsoft.Edge/contexts/Mehoopany-Context","description":"This
@@ -2695,7 +2695,7 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/solutionTemplates/cliwdx6u-solution-cli?api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/solutionTemplates/cliwdx6u-solution-cli?api-version=2026-03-01
   response:
     body:
       string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/solutionTemplates/cliwdx6u-solution-cli","name":"cliwdx6u-solution-cli","type":"microsoft.edge/solutiontemplates","location":"eastus2euap","tags":{},"systemData":{"createdBy":"test@example.com","createdByType":"User","createdAt":"2025-12-15T14:07:44.5588446Z","lastModifiedBy":"cba491bc-48c0-44a6-a6c7-23362a7f54a9","lastModifiedByType":"Application","lastModifiedAt":"2025-12-15T14:08:00.5906796Z"},"properties":{"uniqueIdentifier":"cliwdx6u-solution-cli","description":"This
@@ -2750,14 +2750,14 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/configurations/cliwdx6u-mk78/dynamicConfigurations/cliwdx6u-solution-cli?api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/configurations/cliwdx6u-mk78/dynamicConfigurations/cliwdx6u-solution-cli?api-version=2026-03-01
   response:
     body:
       string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/configurations/cliwdx6u-mk78/dynamicConfigurations/cliwdx6u-solution-cli","name":"cliwdx6u-solution-cli","type":"microsoft.edge/configurations/dynamicconfigurations","systemData":{"createdBy":"test@example.com","createdByType":"User","createdAt":"2025-12-15T14:09:17.3833964Z","lastModifiedBy":"test@example.com","lastModifiedByType":"User","lastModifiedAt":"2025-12-15T14:09:17.3833964Z"},"properties":{"displayName":"cliwdx6u-solution-cli","currentVersion":"1.0.0","provisioningState":"Succeeded"}}'
     headers:
       api-supported-versions:
       - 2024-06-01-preview, 2024-08-01-preview, 2024-09-01-preview, 2025-01-01-preview,
-        2025-06-01, 2025-08-01
+        2025-06-01, 2026-03-01
       cache-control:
       - no-cache
       content-length:
@@ -2817,7 +2817,7 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/configurations/cliwdx6u-mk78/dynamicConfigurations/cliwdx6u-solution-cli/versions/1.0.0?api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/configurations/cliwdx6u-mk78/dynamicConfigurations/cliwdx6u-solution-cli/versions/1.0.0?api-version=2026-03-01
   response:
     body:
       string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/configurations/cliwdx6u-mk78/dynamicConfigurations/cliwdx6u-solution-cli/versions/1.0.0","name":"1.0.0","type":"microsoft.edge/configurations/dynamicconfigurations/versions","systemData":{"createdBy":"test@example.com","createdByType":"User","createdAt":"2025-12-15T14:09:22.6199498Z","lastModifiedBy":"test@example.com","lastModifiedByType":"User","lastModifiedAt":"2025-12-15T14:09:22.6199498Z"},"properties":{"values":"TemperatureRangeMax:
@@ -2826,7 +2826,7 @@ interactions:
         http://localhost:8080/app\n","displayState":"Configured","state":"ConfigurationCompleted","provisioningState":"Succeeded"}}'
     headers:
       api-supported-versions:
-      - 2024-06-01-preview, 2024-09-01-preview, 2025-06-01, 2025-08-01
+      - 2024-06-01-preview, 2024-09-01-preview, 2025-06-01, 2026-03-01
       cache-control:
       - no-cache
       content-length:
@@ -2880,7 +2880,7 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/targets/cliwdx6u-mk78/providers/Microsoft.Edge/configurationreferences/default?api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/targets/cliwdx6u-mk78/providers/Microsoft.Edge/configurationreferences/default?api-version=2026-03-01
   response:
     body:
       string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/targets/cliwdx6u-mk78/providers/Microsoft.Edge/configurationreferences/default","name":"default","type":"microsoft.edge/configurationreferences","systemData":{"createdBy":"cba491bc-48c0-44a6-a6c7-23362a7f54a9","createdByType":"Application","createdAt":"2025-12-15T14:08:38.0622457Z","lastModifiedBy":"cba491bc-48c0-44a6-a6c7-23362a7f54a9","lastModifiedByType":"Application","lastModifiedAt":"2025-12-15T14:08:38.0622457Z"},"properties":{"configurationResourceId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/configurations/cliwdx6u-mk78","provisioningState":"Succeeded"}}'
@@ -2932,7 +2932,7 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/configurations/cliwdx6u-mk78?api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/configurations/cliwdx6u-mk78?api-version=2026-03-01
   response:
     body:
       string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/configurations/cliwdx6u-mk78","name":"cliwdx6u-mk78","type":"microsoft.edge/configurations","location":"eastus2euap","tags":{},"systemData":{"createdBy":"cba491bc-48c0-44a6-a6c7-23362a7f54a9","createdByType":"Application","createdAt":"2025-12-15T14:08:37.8738384Z","lastModifiedBy":"cba491bc-48c0-44a6-a6c7-23362a7f54a9","lastModifiedByType":"Application","lastModifiedAt":"2025-12-15T14:08:37.8738384Z"},"properties":{"provisioningState":"Succeeded"}}'
@@ -2982,7 +2982,7 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/solutionTemplates/cliwdx6u-solution-cli?api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/solutionTemplates/cliwdx6u-solution-cli?api-version=2026-03-01
   response:
     body:
       string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/solutionTemplates/cliwdx6u-solution-cli","name":"cliwdx6u-solution-cli","type":"microsoft.edge/solutiontemplates","location":"eastus2euap","tags":{},"systemData":{"createdBy":"test@example.com","createdByType":"User","createdAt":"2025-12-15T14:07:44.5588446Z","lastModifiedBy":"cba491bc-48c0-44a6-a6c7-23362a7f54a9","lastModifiedByType":"Application","lastModifiedAt":"2025-12-15T14:08:00.5906796Z"},"properties":{"uniqueIdentifier":"cliwdx6u-solution-cli","description":"This
@@ -3033,7 +3033,7 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/configurations/cliwdx6u-mk78/dynamicConfigurations/cliwdx6u-solution-cli/versions/1.0.0?api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/configurations/cliwdx6u-mk78/dynamicConfigurations/cliwdx6u-solution-cli/versions/1.0.0?api-version=2026-03-01
   response:
     body:
       string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/configurations/cliwdx6u-mk78/dynamicConfigurations/cliwdx6u-solution-cli/versions/1.0.0","name":"1.0.0","type":"microsoft.edge/configurations/dynamicconfigurations/versions","systemData":{"createdBy":"test@example.com","createdByType":"User","createdAt":"2025-12-15T14:09:22.6199498Z","lastModifiedBy":"test@example.com","lastModifiedByType":"User","lastModifiedAt":"2025-12-15T14:09:22.6199498Z"},"properties":{"values":"TemperatureRangeMax:
@@ -3088,7 +3088,7 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/targets/cliwdx6u-mk78/providers/Microsoft.Edge/configurationreferences/default?api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/targets/cliwdx6u-mk78/providers/Microsoft.Edge/configurationreferences/default?api-version=2026-03-01
   response:
     body:
       string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/targets/cliwdx6u-mk78/providers/Microsoft.Edge/configurationreferences/default","name":"default","type":"microsoft.edge/configurationreferences","systemData":{"createdBy":"cba491bc-48c0-44a6-a6c7-23362a7f54a9","createdByType":"Application","createdAt":"2025-12-15T14:08:38.0622457Z","lastModifiedBy":"cba491bc-48c0-44a6-a6c7-23362a7f54a9","lastModifiedByType":"Application","lastModifiedAt":"2025-12-15T14:08:38.0622457Z"},"properties":{"configurationResourceId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/configurations/cliwdx6u-mk78","provisioningState":"Succeeded"}}'
@@ -3140,7 +3140,7 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/configurations/cliwdx6u-mk78?api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/configurations/cliwdx6u-mk78?api-version=2026-03-01
   response:
     body:
       string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/configurations/cliwdx6u-mk78","name":"cliwdx6u-mk78","type":"microsoft.edge/configurations","location":"eastus2euap","tags":{},"systemData":{"createdBy":"cba491bc-48c0-44a6-a6c7-23362a7f54a9","createdByType":"Application","createdAt":"2025-12-15T14:08:37.8738384Z","lastModifiedBy":"cba491bc-48c0-44a6-a6c7-23362a7f54a9","lastModifiedByType":"Application","lastModifiedAt":"2025-12-15T14:08:37.8738384Z"},"properties":{"provisioningState":"Succeeded"}}'
@@ -3190,7 +3190,7 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/solutionTemplates/cliwdx6u-solution-cli?api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/solutionTemplates/cliwdx6u-solution-cli?api-version=2026-03-01
   response:
     body:
       string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/solutionTemplates/cliwdx6u-solution-cli","name":"cliwdx6u-solution-cli","type":"microsoft.edge/solutiontemplates","location":"eastus2euap","tags":{},"systemData":{"createdBy":"test@example.com","createdByType":"User","createdAt":"2025-12-15T14:07:44.5588446Z","lastModifiedBy":"cba491bc-48c0-44a6-a6c7-23362a7f54a9","lastModifiedByType":"Application","lastModifiedAt":"2025-12-15T14:08:00.5906796Z"},"properties":{"uniqueIdentifier":"cliwdx6u-solution-cli","description":"This
@@ -3241,7 +3241,7 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/configurations/cliwdx6u-mk78/dynamicConfigurations/cliwdx6u-solution-cli/versions/1.0.0?api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/configurations/cliwdx6u-mk78/dynamicConfigurations/cliwdx6u-solution-cli/versions/1.0.0?api-version=2026-03-01
   response:
     body:
       string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/configurations/cliwdx6u-mk78/dynamicConfigurations/cliwdx6u-solution-cli/versions/1.0.0","name":"1.0.0","type":"microsoft.edge/configurations/dynamicconfigurations/versions","systemData":{"createdBy":"test@example.com","createdByType":"User","createdAt":"2025-12-15T14:09:22.6199498Z","lastModifiedBy":"test@example.com","lastModifiedByType":"User","lastModifiedAt":"2025-12-15T14:09:22.6199498Z"},"properties":{"values":"TemperatureRangeMax:
@@ -3300,7 +3300,7 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: POST
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/solutionTemplates/cliwdx6u-solution-cli/removeVersion?api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/solutionTemplates/cliwdx6u-solution-cli/removeVersion?api-version=2026-03-01
   response:
     body:
       string: 'null'
@@ -3516,7 +3516,7 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: DELETE
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/solutionTemplates/cliwdx6u-solution-cli?api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/solutionTemplates/cliwdx6u-solution-cli?api-version=2026-03-01
   response:
     body:
       string: 'null'
@@ -3736,13 +3736,13 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: POST
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/schemas/cliwdx6u-schema/removeVersion?api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/schemas/cliwdx6u-schema/removeVersion?api-version=2026-03-01
   response:
     body:
       string: '{"status":"Deletion Succeeded"}'
     headers:
       api-supported-versions:
-      - 2024-06-01-preview, 2024-08-01-preview, 2025-01-01-preview, 2025-06-01, 2025-08-01
+      - 2024-06-01-preview, 2024-08-01-preview, 2025-01-01-preview, 2025-06-01, 2026-03-01
       cache-control:
       - no-cache
       content-length:
@@ -3796,13 +3796,13 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: DELETE
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/schemas/cliwdx6u-schema?api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/schemas/cliwdx6u-schema?api-version=2026-03-01
   response:
     body:
       string: 'null'
     headers:
       api-supported-versions:
-      - 2024-06-01-preview, 2024-08-01-preview, 2025-01-01-preview, 2025-06-01, 2025-08-01
+      - 2024-06-01-preview, 2024-08-01-preview, 2025-01-01-preview, 2025-06-01, 2026-03-01
       azure-asyncoperation:
       - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Edge/locations/EASTUS2EUAP/operationStatuses/51502545-3ec7-4df1-84e6-8a81826ed7f3*BFFB0285BECDB58C67251F0EFCC81A8F3BE734CC4A2720C07C80F8972275899B?api-version=2023-07-01-preview&t=639014046395678716&c=MIIHhzCCBm-gAwIBAgITfAlY2NhYWz_rkiYT0gAACVjY2DANBgkqhkiG9w0BAQsFADBEMRMwEQYKCZImiZPyLGQBGRYDR0JMMRMwEQYKCZImiZPyLGQBGRYDQU1FMRgwFgYDVQQDEw9BTUUgSW5mcmEgQ0EgMDUwHhcNMjUxMDE5MDMwMTUzWhcNMjYwNDE3MDMwMTUzWjBAMT4wPAYDVQQDEzVhc3luY29wZXJhdGlvbnNpZ25pbmdjZXJ0aWZpY2F0ZS5tYW5hZ2VtZW50LmF6dXJlLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALb7q8LgkqS_7Sa915WSEvu_LerzErVZMTTkw7KXLAdnIWMjvrOw1RefK_Xe_cFp1_e2xVZM1Zog0tE-_XlllqRwZapoZJTL14Kmh7C0GvefEv-5GdvOnMy695cBHvQJTv1mqxiuvsmhJdB5__zphMuTvy0lF2K1ceor52XBk_VLEQtBcMhz8UUKVZ2KboqO1b56fjCSzbjn-sv5cQ7zx0_GZYADJbddS7dvpIwmb3QZzHcEcbAec_ouQ-YyxmKTpGa17K6DB_CoquSZ2A0TRHJqBpgeGjL0b652ekPbj9oy-sOOusDnwfN95QPWCJFjmNz1aKdnUhXmx8FU134pOkUCAwEAAaOCBHQwggRwMCcGCSsGAQQBgjcVCgQaMBgwCgYIKwYBBQUHAwEwCgYIKwYBBQUHAwIwPQYJKwYBBAGCNxUHBDAwLgYmKwYBBAGCNxUIhpDjDYTVtHiE8Ys-hZvdFs6dEoFghfmRS4WsmTQCAWQCAQcwggHLBggrBgEFBQcBAQSCAb0wggG5MGMGCCsGAQUFBzAChldodHRwOi8vY3JsLm1pY3Jvc29mdC5jb20vcGtpaW5mcmEvQ2VydHMvQ08xUEtJSU5UQ0EwMS5BTUUuR0JMX0FNRSUyMEluZnJhJTIwQ0ElMjAwNS5jcnQwUwYIKwYBBQUHMAKGR2h0dHA6Ly9jcmwxLmFtZS5nYmwvYWlhL0NPMVBLSUlOVENBMDEuQU1FLkdCTF9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3J0MFMGCCsGAQUFBzAChkdodHRwOi8vY3JsMi5hbWUuZ2JsL2FpYS9DTzFQS0lJTlRDQTAxLkFNRS5HQkxfQU1FJTIwSW5mcmElMjBDQSUyMDA1LmNydDBTBggrBgEFBQcwAoZHaHR0cDovL2NybDMuYW1lLmdibC9haWEvQ08xUEtJSU5UQ0EwMS5BTUUuR0JMX0FNRSUyMEluZnJhJTIwQ0ElMjAwNS5jcnQwUwYIKwYBBQUHMAKGR2h0dHA6Ly9jcmw0LmFtZS5nYmwvYWlhL0NPMVBLSUlOVENBMDEuQU1FLkdCTF9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3J0MB0GA1UdDgQWBBSi0lU0HWkl1SHwyRBzQPtbjPmHfTAOBgNVHQ8BAf8EBAMCBaAwggEmBgNVHR8EggEdMIIBGTCCARWgggERoIIBDYY_aHR0cDovL2NybC5taWNyb3NvZnQuY29tL3BraWluZnJhL0NSTC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsMS5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsMi5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsMy5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsNC5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JsMIGdBgNVHSAEgZUwgZIwDAYKKwYBBAGCN3sBATBmBgorBgEEAYI3ewICMFgwVgYIKwYBBQUHAgIwSh5IADMAMwBlADAAMQA5ADIAMQAtADQAZAA2ADQALQA0AGYAOABjAC0AYQAwADUANQAtADUAYgBkAGEAZgBmAGQANQBlADMAMwBkMAwGCisGAQQBgjd7AwIwDAYKKwYBBAGCN3sEAjAfBgNVHSMEGDAWgBR61hmFKHlscXYeYPjzS--iBUIWHTAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDQYJKoZIhvcNAQELBQADggEBACdnVC4tNlyw3EyuiJTFX5692Q_SgsQB7SjH2__G8q1XVJ0GiNSI4NKXoC8rVoxrLDL28sgifuyaEjoA9IYoahBs9l6DzxOxA0fDaBOTteaFuniOzVtW6WubmshP_yDd1pFPJydCOEtgKApCNY8y5eo8GzdatHpMEID7E2ZDrxTnq7PtzLXpoeF0A5W6qhqGypYabh7ugJ5-R8hb1iOlFYy2yvCrBaAW9wwnUPpO3DQRyoxnbzomyTIbrxEJuuaalADYKnu7GVtfL43Srrrx_HEfhy1rsf0ZK9CmJ64NOTHXIRG0kYIl5LhwZVZSEDqBPTAAy9oAm1i5D1jbVw2FPF8&s=Aw25UKnQ3acEXC5rHzYKenuRpAuaREUPH_BlBGQLCA9xPkiLgkBAeS-HqgnqSg9H4CL9YurSjzZZIk8Kyc0zmnVMXmjInnh0m5lOADoh2bbg_BWggm3MeSYWfNxqn-rwoF6T3Sw7oMGKm3zEMhPE0RzxCU45C6LDKmFIdCUEwLennFXj75MxMswx6eBLSr6EFvHWk0dKpuelSROdfvYLMLhu7XBUJN-ym3sVtKYjDpxo76qYglpuWwW6eeGtPvIftWVlEVCwfM4yJ3eHCg75ZaQZxNykfDIFgidipTtN8juFSn4gJcfB-gEyoLLRsDWtGMwCmKNEOz_TuhCFMM8B7g&h=5sBbFAn33YySJGEBmrqpL0HskbhsMK6srmial-OKUgk
       cache-control:
@@ -4016,13 +4016,13 @@ interactions:
       User-Agent:
       - AZURECLI/2.81.0 azsdk-python-core/1.35.0 Python/3.10.11 (Windows-10-10.0.26200-SP0)
     method: DELETE
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/targets/cliwdx6u-mk78?forceDelete=false&api-version=2025-08-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ConfigManager-CloudTest-Playground-Portal-CLI/providers/Microsoft.Edge/targets/cliwdx6u-mk78?forceDelete=false&api-version=2026-03-01
   response:
     body:
       string: 'null'
     headers:
       api-supported-versions:
-      - 2025-01-01-preview, 2025-06-01, 2025-08-01
+      - 2025-01-01-preview, 2025-06-01, 2026-03-01
       azure-asyncoperation:
       - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Edge/locations/EASTUS2EUAP/operationStatuses/fff112f0-3754-4b86-99ce-81c1678355bb*8630B338494071C23254A298947ABAEFA16DEA6279BB572500AA1511CF92A289?api-version=2023-07-01-preview&t=639014046741282687&c=MIIHhzCCBm-gAwIBAgITfAlY2NhYWz_rkiYT0gAACVjY2DANBgkqhkiG9w0BAQsFADBEMRMwEQYKCZImiZPyLGQBGRYDR0JMMRMwEQYKCZImiZPyLGQBGRYDQU1FMRgwFgYDVQQDEw9BTUUgSW5mcmEgQ0EgMDUwHhcNMjUxMDE5MDMwMTUzWhcNMjYwNDE3MDMwMTUzWjBAMT4wPAYDVQQDEzVhc3luY29wZXJhdGlvbnNpZ25pbmdjZXJ0aWZpY2F0ZS5tYW5hZ2VtZW50LmF6dXJlLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALb7q8LgkqS_7Sa915WSEvu_LerzErVZMTTkw7KXLAdnIWMjvrOw1RefK_Xe_cFp1_e2xVZM1Zog0tE-_XlllqRwZapoZJTL14Kmh7C0GvefEv-5GdvOnMy695cBHvQJTv1mqxiuvsmhJdB5__zphMuTvy0lF2K1ceor52XBk_VLEQtBcMhz8UUKVZ2KboqO1b56fjCSzbjn-sv5cQ7zx0_GZYADJbddS7dvpIwmb3QZzHcEcbAec_ouQ-YyxmKTpGa17K6DB_CoquSZ2A0TRHJqBpgeGjL0b652ekPbj9oy-sOOusDnwfN95QPWCJFjmNz1aKdnUhXmx8FU134pOkUCAwEAAaOCBHQwggRwMCcGCSsGAQQBgjcVCgQaMBgwCgYIKwYBBQUHAwEwCgYIKwYBBQUHAwIwPQYJKwYBBAGCNxUHBDAwLgYmKwYBBAGCNxUIhpDjDYTVtHiE8Ys-hZvdFs6dEoFghfmRS4WsmTQCAWQCAQcwggHLBggrBgEFBQcBAQSCAb0wggG5MGMGCCsGAQUFBzAChldodHRwOi8vY3JsLm1pY3Jvc29mdC5jb20vcGtpaW5mcmEvQ2VydHMvQ08xUEtJSU5UQ0EwMS5BTUUuR0JMX0FNRSUyMEluZnJhJTIwQ0ElMjAwNS5jcnQwUwYIKwYBBQUHMAKGR2h0dHA6Ly9jcmwxLmFtZS5nYmwvYWlhL0NPMVBLSUlOVENBMDEuQU1FLkdCTF9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3J0MFMGCCsGAQUFBzAChkdodHRwOi8vY3JsMi5hbWUuZ2JsL2FpYS9DTzFQS0lJTlRDQTAxLkFNRS5HQkxfQU1FJTIwSW5mcmElMjBDQSUyMDA1LmNydDBTBggrBgEFBQcwAoZHaHR0cDovL2NybDMuYW1lLmdibC9haWEvQ08xUEtJSU5UQ0EwMS5BTUUuR0JMX0FNRSUyMEluZnJhJTIwQ0ElMjAwNS5jcnQwUwYIKwYBBQUHMAKGR2h0dHA6Ly9jcmw0LmFtZS5nYmwvYWlhL0NPMVBLSUlOVENBMDEuQU1FLkdCTF9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3J0MB0GA1UdDgQWBBSi0lU0HWkl1SHwyRBzQPtbjPmHfTAOBgNVHQ8BAf8EBAMCBaAwggEmBgNVHR8EggEdMIIBGTCCARWgggERoIIBDYY_aHR0cDovL2NybC5taWNyb3NvZnQuY29tL3BraWluZnJhL0NSTC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsMS5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsMi5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsMy5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsNC5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JsMIGdBgNVHSAEgZUwgZIwDAYKKwYBBAGCN3sBATBmBgorBgEEAYI3ewICMFgwVgYIKwYBBQUHAgIwSh5IADMAMwBlADAAMQA5ADIAMQAtADQAZAA2ADQALQA0AGYAOABjAC0AYQAwADUANQAtADUAYgBkAGEAZgBmAGQANQBlADMAMwBkMAwGCisGAQQBgjd7AwIwDAYKKwYBBAGCN3sEAjAfBgNVHSMEGDAWgBR61hmFKHlscXYeYPjzS--iBUIWHTAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDQYJKoZIhvcNAQELBQADggEBACdnVC4tNlyw3EyuiJTFX5692Q_SgsQB7SjH2__G8q1XVJ0GiNSI4NKXoC8rVoxrLDL28sgifuyaEjoA9IYoahBs9l6DzxOxA0fDaBOTteaFuniOzVtW6WubmshP_yDd1pFPJydCOEtgKApCNY8y5eo8GzdatHpMEID7E2ZDrxTnq7PtzLXpoeF0A5W6qhqGypYabh7ugJ5-R8hb1iOlFYy2yvCrBaAW9wwnUPpO3DQRyoxnbzomyTIbrxEJuuaalADYKnu7GVtfL43Srrrx_HEfhy1rsf0ZK9CmJ64NOTHXIRG0kYIl5LhwZVZSEDqBPTAAy9oAm1i5D1jbVw2FPF8&s=XtsNRXEhMBk1uwPXcRkvHCemt29_auHGFrhXwEICx8ekekzcSXO78uAzh5zoPJmdpsqEan5C4opD6vzut887U_z3pJHYnByYz0UNHPBhcAaTio4xhK965SE953gU4iJgEtOLNXIqFF6EZ0yEcYVABJgmuJSe8fHtLHvpJ1uNcKtADmjyc9NWTU59Dc8d0HVse8aPrEoEyaUJ3fwIuYgasdX6e7U3UAIz09K468IKajt_1Up6j2xVdJLKTUTDVcB9kVRPxO1AFPMPy6e5dgMISxMiZXZu-gIcO_qCt-Zu_MtnesscoxDOarlfoJ_e3wtSj_-vrXJ4w_fbWNfcLOi-Rw&h=zTttE-IT_SFMApfwCGC5HMPl6d5R9Z88rLLaFpuzxbc
       cache-control:
