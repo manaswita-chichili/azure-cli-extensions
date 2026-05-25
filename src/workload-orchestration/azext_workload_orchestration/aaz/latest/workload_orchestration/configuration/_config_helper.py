@@ -155,7 +155,10 @@ class ConfigurationHelper:
             template_type = "configTemplates"
         
         template_id = f"/subscriptions/{subscription_id}/resourceGroups/{template_resource_group_name}/providers/Microsoft.Edge/{template_type}/{template_name}"
-        
+
+        # Use appropriate API version based on template type
+        api_version = "2026-05-01-preview" if solution_flag else "2026-03-01"
+
         try:
             # Make GET request to template using client.format_url
             template_url = client.format_url(
@@ -166,7 +169,7 @@ class ConfigurationHelper:
                 templateName=template_name
             )
             request = client._request("GET", template_url, {
-                "api-version": "2026-03-01"
+                "api-version": api_version
             }, {
                 "Accept": "application/json"
             }, None, {}, None) 
@@ -228,11 +231,14 @@ class ConfigurationHelper:
         
         template_version_id = f"/subscriptions/{subscription_id}/resourceGroups/{resource_group}/providers/Microsoft.Edge/{template_type}/{template_name}/versions/{version}"
         schema_url = template_version_id + "/" + schema_endpoint
-        
+
+        # Use appropriate API version based on template type
+        api_version = "2026-05-01-preview" if solution_flag else "2026-03-01"
+
         try:
             # Make GET request to schema endpoint
             request = client._request("GET", schema_url, {
-                "api-version": "2026-03-01"
+                "api-version": api_version
             }, {
                 "Accept": "application/json"
             }, None, {}, None)  # Add missing parameters
@@ -286,11 +292,14 @@ class ConfigurationHelper:
             template_type = "configTemplates"
         
         template_version_id = f"/subscriptions/{subscription_id}/resourceGroups/{resource_group}/providers/Microsoft.Edge/{template_type}/{template_name}/versions/{version}"
-        
+
+        # Use appropriate API version based on template type
+        api_version = "2026-05-01-preview" if solution_flag else "2026-03-01"
+
         try:
             # Make GET request to template version endpoint
             request = client._request("GET", template_version_id, {
-                "api-version": "2026-03-01"
+                "api-version": api_version
             }, {
                 "Accept": "application/json"
             }, None, {}, None)
@@ -331,7 +340,7 @@ class ConfigurationHelper:
         try:
             # Get target capabilities
             target_request = client._request("GET", hierarchy_id_str, {
-                "api-version": "2026-03-01"
+                "api-version": "2026-05-01-preview"
             }, {
                 "Accept": "application/json"
             }, None, {}, None)
@@ -348,7 +357,7 @@ class ConfigurationHelper:
             solution_template_id = f"/subscriptions/{subscription_id}/resourceGroups/{resource_group}/providers/Microsoft.Edge/solutionTemplates/{template_name}"
             
             solution_request = client._request("GET", solution_template_id, {
-                "api-version": "2026-03-01"
+                "api-version": "2026-05-01-preview"
             }, {
                 "Accept": "application/json"
             }, None, {}, None)
